@@ -1,0 +1,10 @@
+1;2890307270012;Elena;Paval;0753074023;Str.Nicolae Iorga nr. 53B, Bucuresti;
+2;1860221240024;Ionut;Ilincaru;0724142321;Bulevardul Libertatii nr. 2, Bucuresti;
+3;1821221312004;Mihai;Trifan;0765321123;Str. Ametistului nr.36, Bloc2, ap.15, Chiajna;
+4;1870221452021;Tiberiu;Voroneanu;0720111335;Str. Mihai Eminescu, Bloc15, ap.2, Voluntari, Ilfov;
+5;2821003252015;Georgiana;Modiga;0735125336;Str. Malcoci, Bloc2, ap.75, Bucuresti;
+6;1880601220001;Marian;Chiriac;0741313212;Str. Luceafarului, nr. 3, Chiajna;
+7;2980101253142;Adina;Chiriac;0755342156;Str. Rozelor, nr. 75, Tunari;
+8;1920217401018;Laurentiu;Marian;0765112375;Str. Vasile Milea, nr. 7, Bucuresti;
+9;2960805111258;Oana;Subtirica;0766122677;Str. Moise Nicoara , nr. 178, Bucuresti;
+10;2970423200075;Alexandra;Gherghen;0715452317;Str. Italia, nr. 1, Bucuresti;

@@ -3,14 +3,14 @@ package model;
 import java.util.Date;
 import java.util.List;
 
-public class CustomizedMembership extends Membership {
+public class CustomizedMembership extends Membership implements Discountable {
     private Trainer trainer;
     private int noOfPrivateHours;
     private GymLocation location;
 
-    public CustomizedMembership(String code, String description,
-                                double price, Activity activity, Date registrationDate, Date startDate, MembershipType membershipType,
-                                Client client, List<GymClass> gymClassList, Trainer trainer, int noOfPrivateHours, GymLocation location) {
+    public CustomizedMembership(String code, String description,double price, Activity activity, Date registrationDate,
+                                Date startDate, MembershipType membershipType, Client client, List<GymClass> gymClassList,
+                                Trainer trainer, int noOfPrivateHours, GymLocation location) {
         super(code, description, price, activity, registrationDate, startDate, membershipType, client, gymClassList);
         this.trainer = trainer;
         this.noOfPrivateHours = noOfPrivateHours;
@@ -48,5 +48,13 @@ public class CustomizedMembership extends Membership {
         double privateHoursPrice = noOfPrivateHours*pricePerHour;
         double totalPrice = basicPrice+privateHoursPrice;
         return totalPrice;
+    }
+    @Override
+    public void applyDiscount(int percent){
+        double newPrice;
+        double actualPrice =getPrice();
+        newPrice = actualPrice - (actualPrice*percent/100);
+        setPrice(newPrice);
+
     }
 }

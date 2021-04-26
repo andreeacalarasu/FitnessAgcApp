@@ -14,8 +14,8 @@ public class Membership {
     private List<GymClass> gymClassList;
 
     public Membership(String code, String description,
-                      double price,  Date registrationDate, Date startDate, MembershipType membershipType,
-                      Client client,List<GymClass> gymClassList){
+                      double price, Activity activity, Date registrationDate, Date startDate, MembershipType membershipType,
+                      Client client, List<GymClass> gymClassList){
         this.code = code;
         this.description = description;
         this.price = price;
