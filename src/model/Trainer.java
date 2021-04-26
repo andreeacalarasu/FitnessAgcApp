@@ -4,10 +4,10 @@ public class Trainer {
     private int id;
     private String name;
     private String email;
-    private int mobile;
+    private String mobile;
     private double pricePerHour;
 
-    public Trainer(int id, String name, String email, int mobile, double pricePerHour) {
+    public Trainer(int id, String name, String email, String mobile, double pricePerHour) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -18,13 +18,13 @@ public class Trainer {
     public int getId() {return id;}
     public String getName() {return name;}
     public String getEmail() {return email;}
-    public int getMobile() {return mobile;}
+    public String getMobile() {return mobile;}
     public double getPricePerHour() {return pricePerHour;}
 
     public void setId(int id) {this.id = id;}
     public void setName(String name) {this.name = name;}
     public void setEmail(String email) {this.email = email;}
-    public void setMobile(int mobile) {this.mobile = mobile;}
+    public void setMobile(String mobile) {this.mobile = mobile;}
     public void setPricePerHour(double pricePerHour) {this.pricePerHour = pricePerHour;}
 
     @Override

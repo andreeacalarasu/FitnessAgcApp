@@ -101,6 +101,11 @@ public class DataReader {
             String trainingClassTimeString = words[7].trim();
             String dayOfWeekString = words[8].trim();
             String trainerString = words[9].trim();
+            String idString = words[10].trim();
+            String nameString = words[11].trim();
+            String emailString = words[12].trim();
+            String mobileString = words[13].trim();
+            String pricePerHourString = words[14].trim();
 
             //String code, Activity activity,int noOfClients,TrainingLevel trainingLevel, int classDuration, GymLocation location,
             // String classDescription,double trainingClassTime,DayOfWeek dayOfWeek, Trainer trainer
@@ -114,7 +119,12 @@ public class DataReader {
             String classDescription = classDescriptionString;
             double trainingClassTime = Double.parseDouble(trainingClassTimeString);
             DayOfWeek dayOfWeek = DayOfWeek.valueOf(dayOfWeekString);
-            Trainer trainer = new Trainer();
+            int id = Integer.parseInt(idString);
+            String name = nameString;
+            String email = emailString;
+            String mobile = mobileString;
+            double pricePerHour = Double.parseDouble(pricePerHourString);
+            Trainer trainer = new Trainer(id,name,email, mobile,pricePerHour);
 
             GymClass gymClass = new GymClass(code,activity,noOfClients,trainingLevel,classDuration,location,
                     classDescription,trainingClassTime,dayOfWeek,trainer);
