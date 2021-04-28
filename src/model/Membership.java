@@ -10,19 +10,19 @@ public class Membership {
     private Date registrationDate;
     private Date startDate;
     private MembershipType membershipType;
-    private Client client;
+    private int clientID;
     private List<GymClass> gymClassList;
 
     public Membership(String code, String description,
-                      double price, Activity activity, Date registrationDate, Date startDate, MembershipType membershipType,
-                      Client client, List<GymClass> gymClassList){
+                      double price, Date registrationDate, Date startDate, MembershipType membershipType,
+                      int clientID, List<GymClass> gymClassList){
         this.code = code;
         this.description = description;
         this.price = price;
         this.registrationDate = registrationDate;
         this.startDate = startDate;
         this.membershipType = membershipType;
-        this.client = client;
+        this.clientID = clientID;
         this.gymClassList = gymClassList;
 
     }
@@ -32,7 +32,7 @@ public class Membership {
     public Date getRegistrationDate(){return registrationDate;}
     public Date getStartDate(){return startDate;}
     public MembershipType getMembershipType(){return membershipType;}
-    public Client getClient(){return client;}
+    public int getClientID(){return clientID;}
     private List<GymClass> getGymClassList(){return gymClassList;}
 
     public void setCode(String code) {this.code = code;}
@@ -41,7 +41,7 @@ public class Membership {
     public void setRegistrationDate(Date registrationDate) {this.registrationDate = registrationDate;}
     public void setStartDate(Date startDate) {this.startDate = startDate;}
     public void setMembershipType(MembershipType membershipType) {this.membershipType = membershipType;}
-    public void setClient(Client client) {this.client = client;}
+    public void setClientID(int clientID) {this.clientID = clientID;}
     public void setGymClassList(List<GymClass> gymClassList) {this.gymClassList = gymClassList;}
 
     @Override
@@ -61,6 +61,6 @@ public class Membership {
     public String toString(){
         return "Code number : " + code + ", Membership description : " + description + ", Price : "+ price +
                 ", Registration Date : " + registrationDate + ", Start date : " + startDate+", Membership Type : " +
-                membershipType + ", Client : " + client + ", GymClass List : " + gymClassList;
+                membershipType + ", Client ID : " + clientID + ", GymClass List : " + gymClassList;
     }
 }

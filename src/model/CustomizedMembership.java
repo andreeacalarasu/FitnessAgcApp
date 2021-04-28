@@ -9,9 +9,9 @@ public class CustomizedMembership extends Membership implements Discountable {
     private GymLocation location;
 
     public CustomizedMembership(String code, String description,double price, Activity activity, Date registrationDate,
-                                Date startDate, MembershipType membershipType, Client client, List<GymClass> gymClassList,
+                                Date startDate, MembershipType membershipType, int clientID, List<GymClass> gymClassList,
                                 Trainer trainer, int noOfPrivateHours, GymLocation location) {
-        super(code, description, price, activity, registrationDate, startDate, membershipType, client, gymClassList);
+        super(code, description, price, registrationDate, startDate, membershipType, clientID, gymClassList);
         this.trainer = trainer;
         this.noOfPrivateHours = noOfPrivateHours;
         this.location = location;

@@ -120,14 +120,9 @@ public class DataReader {
             double trainingClassTime = Double.parseDouble(trainingClassTimeString);
             DayOfWeek dayOfWeek = DayOfWeek.valueOf(dayOfWeekString);
             int id = Integer.parseInt(idString);
-            String name = nameString;
-            String email = emailString;
-            String mobile = mobileString;
-            double pricePerHour = Double.parseDouble(pricePerHourString);
-            Trainer trainer = new Trainer(id,name,email, mobile,pricePerHour);
 
             GymClass gymClass = new GymClass(code,activity,noOfClients,trainingLevel,classDuration,location,
-                    classDescription,trainingClassTime,dayOfWeek,trainer);
+                    classDescription,trainingClassTime,dayOfWeek,id);
             gymClassList.add(gymClass);
         }
     }

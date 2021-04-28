@@ -10,10 +10,10 @@ public class GymClass {
     private String classDescription;
     private double trainingClassTime;
     private DayOfWeek dayOfWeek;
-    private Trainer trainer;
+    private int trainerID;
 
     public GymClass(String code, Activity activity,int noOfClients,TrainingLevel trainingLevel, int classDuration, GymLocation location, String classDescription,
-                    double trainingClassTime,DayOfWeek dayOfWeek, Trainer trainer){
+                    double trainingClassTime,DayOfWeek dayOfWeek, int trainerID){
         this.code=code;
         this.activity = activity;
         this.noOfClients = noOfClients;
@@ -23,7 +23,7 @@ public class GymClass {
         this.classDescription = classDescription;
         this.trainingClassTime = trainingClassTime;
         this.dayOfWeek = dayOfWeek;
-        this.trainer = trainer;
+        this.trainerID = trainerID;
 
     }
 
@@ -36,7 +36,7 @@ public class GymClass {
     public GymLocation getLocation(){return location;}
     public double getTrainingClassTime(){return trainingClassTime;}
     public DayOfWeek getDayOfWeek(){return dayOfWeek;}
-    public Trainer getTrainer(){return trainer;}
+    public int getTrainerID(){return trainerID;}
 
     public void setCode(String code){this.code = code;}
     public void setActivity(Activity activity) {this.activity = activity;}
@@ -47,7 +47,7 @@ public class GymClass {
     public void setClassDescription(String classDescription) {this.classDescription = classDescription;}
     public void setTrainingClassTime(double trainingClassTime) {this.trainingClassTime = trainingClassTime;}
     public void setDayOfWeek(DayOfWeek dayOfWeek) {this.dayOfWeek = dayOfWeek;}
-    public void setTrainer(Trainer trainer) {this.trainer = trainer;}
+    public void setTrainerID(int trainerID) {this.trainerID = trainerID;}
 
     @Override
     public int hashCode(){
@@ -66,6 +66,6 @@ public class GymClass {
         return "Code number : " + code + ", Activity : " + activity + ", Number of clients : "+ noOfClients +
                 ", Training Level : " + trainingLevel + ", Class Duration : " + classDuration +", Location : " +
                 location + ", Class Description : " + classDescription + ", Training Class Time : " + trainingClassTime +
-                ", Day of The Week: " + dayOfWeek + ", Trainer : " + trainer;}
+                ", Day of The Week: " + dayOfWeek + ", Trainer : " + trainerID;}
 
 }

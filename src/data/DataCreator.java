@@ -1,17 +1,20 @@
 package data;
 
 
-import model.Client;
+import model.*;
 
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
 public class DataCreator {
 
     public List<Client> createListOfClients (){
-        List<Client>clientList = new ArrayList<>();
+        List<Client> clientList = new ArrayList<>();
         Client client1 = new Client(1,"2890307270012","Elena","Paval","0753074023",
                 "Str.Nicolae Iorga nr. 53B, Bucuresti");
         Client client2 = new Client(2,"1860221240024", "Ionut","Ilincaru","0724142321",
@@ -47,4 +50,302 @@ public class DataCreator {
         return clientList;
     }
 
+    public List<Trainer> createListOfTrainers (){
+        List<Trainer> trainerList = new ArrayList<>();
+        Trainer trainer1 = new Trainer (1, "George Mares", "george.mares@fitnessagc.ro",
+                "0753044021",100);
+        Trainer trainer2 = new Trainer (2, "Alina Craciun", "alina.craciun@fitnessagc.ro",
+                "0744312745",110);
+        Trainer trainer3 = new Trainer (3, "Maria Marinescu","maria.marinescu@fitnessagc.ro",
+                "0721125888",90);
+        Trainer trainer4 = new Trainer(4, "Alexandru Calin", "alexandru.calin@fitnessagc.ro",
+                "0744332547",120);
+        Trainer trainer5 = new Trainer(5,"Alin Iofcea", "alin.iofcea@fitnessagc.ro",
+                "0741158745", 110);
+
+        trainerList.add(trainer1);
+        trainerList.add(trainer2);
+        trainerList.add(trainer3);
+        trainerList.add(trainer4);
+        trainerList.add(trainer5);
+
+        return trainerList;
+    }
+
+    public List<Membership> createListOfMembership(){
+
+        List<GymClass> weekdayList = new ArrayList<>();
+        GymClass gymClassWeekDayAqua = new GymClass("AQUA11",Activity.AQUA,5,TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",09.00,DayOfWeek.MONDAY,1 );
+        GymClass gymClassWeekDayAqua2 = new GymClass("AQUA12",Activity.AQUA,10,TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",09.00,DayOfWeek.WEDNESDAY,1 );
+        GymClass gymClassWeekDayAqua3 = new GymClass("AQUA13",Activity.AQUA,10,TrainingLevel.ADVANCED,
+                50,GymLocation.TITAN,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",09.00,DayOfWeek.FRIDAY,1 );
+        GymClass gymClassWeekDayBagBoxing1 = new GymClass("BAG_BOXING11",Activity.BAG_BOXING,20, TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.TUESDAY,3);
+        GymClass gymClassWeekDayBagBoxing2 = new GymClass("BAG_BOXING12",Activity.BAG_BOXING,20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.MONDAY,3);
+        GymClass gymClassWeekDayBagBoxing3 = new GymClass("BAG_BOXING13",Activity.BAG_BOXING,20, TrainingLevel.ADVANCED,
+                50,GymLocation.TITAN, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.FRIDAY,4);
+        GymClass gymClassWeekdayBodyCombat1 = new GymClass("BODY_COMBAT11", Activity.BODY_COMBAT,20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.AVIATIEI,"This very energetic, totally contactless workout will help you, blow by blow " +
+                "to find the path to the desired physical condition and burn up to 700 calories along the way.",11.00,
+                DayOfWeek.MONDAY, 5);
+
+        weekdayList.add(gymClassWeekDayAqua);
+        weekdayList.add(gymClassWeekDayAqua2);
+        weekdayList.add(gymClassWeekDayAqua3);
+        weekdayList.add(gymClassWeekDayBagBoxing1);
+        weekdayList.add(gymClassWeekDayBagBoxing2);
+        weekdayList.add(gymClassWeekDayBagBoxing3);
+        weekdayList.add(gymClassWeekdayBodyCombat1);
+
+        List<GymClass> weekendList = new ArrayList<>();
+
+        GymClass gymClassWeekendAqua1 = new GymClass("AQUA14",Activity.AQUA,5,TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",11.30,DayOfWeek.SUNDAY,2 );
+        GymClass gymClassWeekendAqua2 = new GymClass("AQUA15",Activity.AQUA,10,TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",11.30,DayOfWeek.SATURDAY,2 );
+        GymClass gymClassWeekendBagBoxing1 = new GymClass("BAG_BOXING14",Activity.BAG_BOXING,20, TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.SATURDAY,4);
+        GymClass gymClassWeekendBagBoxing2 = new GymClass("BAG_BOXING15",Activity.BAG_BOXING,20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.SUNDAY,4);
+        GymClass gymClassWeekendSpinning2 = new GymClass("SPINNING12",Activity.SPINNING, 20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.TITAN,"Is based on alternating periods of effort and active recovery in a training session, which means a series of planned " +
+                "alternations between high-intensity anaerobic areas (85%) and aerobic, low-intensity (65%). ",18.00,DayOfWeek.SUNDAY, 2);
+        GymClass gymClassWeekendBodyCombat2 = new GymClass("BODY_COMBAT12", Activity.BODY_COMBAT,20, TrainingLevel.ADVANCED,
+                50,GymLocation.TITAN,"This very energetic, totally contactless workout will help you, blow by blow " +
+                "to find the path to the desired physical condition and burn up to 700 calories along the way.",11.00,
+                DayOfWeek.SATURDAY, 5);
+
+        weekendList.add(gymClassWeekendAqua1);
+        weekendList.add(gymClassWeekendAqua2);
+        weekendList.add(gymClassWeekendBagBoxing1);
+        weekendList.add(gymClassWeekendBagBoxing2);
+        weekendList.add(gymClassWeekendBodyCombat2);
+        weekendList.add(gymClassWeekendSpinning2);
+
+        List<GymClass> monthlyList = new ArrayList<>();
+
+        GymClass gymClassMonthlyAqua = new GymClass("AQUA11",Activity.AQUA,5,TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",09.00,DayOfWeek.MONDAY,1 );
+        GymClass gymClassMonthlyAqua2 = new GymClass("AQUA12",Activity.AQUA,10,TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",09.00,DayOfWeek.WEDNESDAY,1 );
+        GymClass gymClassMonthlyAqua3 = new GymClass("AQUA13",Activity.AQUA,10,TrainingLevel.ADVANCED,
+                50,GymLocation.TITAN,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",09.00,DayOfWeek.FRIDAY,1 );
+        GymClass gymClassMonthlyAqua4 = new GymClass("AQUA14",Activity.AQUA,5,TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",11.30,DayOfWeek.SUNDAY,2 );
+        GymClass gymClassMonthlyAqua5 = new GymClass("AQUA15",Activity.AQUA,10,TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",11.30,DayOfWeek.SATURDAY,2 );
+        GymClass gymClassMonthlyBagBoxing1 = new GymClass("BAG_BOXING11",Activity.BAG_BOXING,20, TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.TUESDAY,3);
+        GymClass gymClassMonthlyBagBoxing2 = new GymClass("BAG_BOXING12",Activity.BAG_BOXING,20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.MONDAY,3);
+        GymClass gymClassMonthlyBagBoxing3 = new GymClass("BAG_BOXING13",Activity.BAG_BOXING,20, TrainingLevel.ADVANCED,
+                50,GymLocation.TITAN, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.FRIDAY,4);
+        GymClass gymClassMonthlyBagBoxing4 = new GymClass("BAG_BOXING14",Activity.BAG_BOXING,20, TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.SATURDAY,4);
+        GymClass gymClassMonthlyBagBoxing5 = new GymClass("BAG_BOXING15",Activity.BAG_BOXING,20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.SUNDAY,4);
+        GymClass gymClassMonthlySpinning1 = new GymClass("SPINNING11",Activity.SPINNING, 20, TrainingLevel.BEGINNER,
+                50,GymLocation.TITAN,"Is based on alternating periods of effort and active recovery in a training " +
+                "session, which means a series of planned " +"alternations between high-intensity anaerobic areas (85%) and aerobic, " +
+                "low-intensity (65%). ",18.00,DayOfWeek.TUESDAY, 2);
+        GymClass gymClassMonthlySpinning2 = new GymClass("SPINNING12",Activity.SPINNING, 20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.TITAN,"Is based on alternating periods of effort and active recovery in a training " +
+                "session, which means a series of planned " + "alternations between high-intensity anaerobic areas (85%) and aerobic, " +
+                "low-intensity (65%). ",18.00,DayOfWeek.SUNDAY, 2);
+        GymClass gymClassMonthlyBodyCombat1 = new GymClass("BODY_COMBAT11", Activity.BODY_COMBAT,20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.AVIATIEI,"This very energetic, totally contactless workout will help you, blow by blow " +
+                "to find the path to the desired physical condition and burn up to 700 calories along the way.",11.00,
+                DayOfWeek.MONDAY, 5);
+        GymClass gymClassMonthlyBodyCombat2 = new GymClass("BODY_COMBAT12", Activity.BODY_COMBAT,20, TrainingLevel.ADVANCED,
+                50,GymLocation.TITAN,"This very energetic, totally contactless workout will help you, blow by blow " +
+                "to find the path to the desired physical condition and burn up to 700 calories along the way.",11.00,
+                DayOfWeek.SATURDAY, 5);
+
+        monthlyList.add(gymClassMonthlyAqua);
+        monthlyList.add(gymClassMonthlyAqua2);
+        monthlyList.add(gymClassMonthlyAqua3);
+        monthlyList.add(gymClassMonthlyAqua4);
+        monthlyList.add(gymClassMonthlyAqua5);
+        monthlyList.add(gymClassMonthlyBagBoxing1);
+        monthlyList.add(gymClassMonthlyBagBoxing2);
+        monthlyList.add(gymClassMonthlyBagBoxing3);
+        monthlyList.add(gymClassMonthlyBagBoxing4);
+        monthlyList.add(gymClassMonthlyBagBoxing5);
+        monthlyList.add(gymClassMonthlyBodyCombat1);
+        monthlyList.add(gymClassMonthlyBodyCombat2);
+        monthlyList.add(gymClassMonthlySpinning1);
+        monthlyList.add(gymClassMonthlySpinning2);
+
+        List<GymClass> annuallyList = new ArrayList<>();
+        GymClass gymClassAnnuallyAqua = new GymClass("AQUA11",Activity.AQUA,5,TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",09.00,DayOfWeek.MONDAY,1 );
+        GymClass gymClassAnnuallyAqua2 = new GymClass("AQUA12",Activity.AQUA,10,TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",09.00,DayOfWeek.WEDNESDAY,1 );
+        GymClass gymClassAnnuallyAqua3 = new GymClass("AQUA13",Activity.AQUA,10,TrainingLevel.ADVANCED,
+                50,GymLocation.TITAN,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",09.00,DayOfWeek.FRIDAY,1 );
+        GymClass gymClassAnnuallyAqua4 = new GymClass("AQUA14",Activity.AQUA,5,TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",11.30,DayOfWeek.SUNDAY,2 );
+        GymClass gymClassAnnuallyAqua5 = new GymClass("AQUA15",Activity.AQUA,10,TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI,"Improves blood circulation, lymphatic system, tones " +
+                "the entire body and increases resistance – all in one workout.",11.30,DayOfWeek.SATURDAY,2 );
+        GymClass gymClassAnnuallyBagBoxing1 = new GymClass("BAG_BOXING11",Activity.BAG_BOXING,20, TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.TUESDAY,3);
+        GymClass gymClassAnnuallyBagBoxing2 = new GymClass("BAG_BOXING12",Activity.BAG_BOXING,20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.MONDAY,3);
+        GymClass gymClassAnnuallyBagBoxing3 = new GymClass("BAG_BOXING13",Activity.BAG_BOXING,20, TrainingLevel.ADVANCED,
+                50,GymLocation.TITAN, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.FRIDAY,4);
+        GymClass gymClassAnnuallyBagBoxing4 = new GymClass("BAG_BOXING14",Activity.BAG_BOXING,20, TrainingLevel.BEGINNER,
+                50,GymLocation.AVIATIEI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.SATURDAY,4);
+        GymClass gymClassAnnuallyBagBoxing5 = new GymClass("BAG_BOXING15",Activity.BAG_BOXING,20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.MILITARI, "The punching bag, a pair of boxing gloves and great music are all " +
+                "you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. " +
+                "Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve " +
+                "whole-body coordination.",14.00,DayOfWeek.SUNDAY,4);
+        GymClass gymClassAnnuallySpinning1 = new GymClass("SPINNING11",Activity.SPINNING, 20, TrainingLevel.BEGINNER,
+                50,GymLocation.TITAN,"Is based on alternating periods of effort and active recovery in a training " +
+                "session, which means a series of planned " + "alternations between high-intensity anaerobic areas (85%) and aerobic, " +
+                "low-intensity (65%). ",18.00,DayOfWeek.TUESDAY, 2);
+        GymClass gymClassAnnuallySpinning2 = new GymClass("SPINNING12",Activity.SPINNING, 20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.TITAN,"Is based on alternating periods of effort and active recovery in a training " +
+                "session, which means a series of planned " + "alternations between high-intensity anaerobic areas (85%) and aerobic, " +
+                "low-intensity (65%). ",18.00,DayOfWeek.SUNDAY, 2);
+        GymClass gymClassAnnuallyBodyCombat1 = new GymClass("BODY_COMBAT11", Activity.BODY_COMBAT,20, TrainingLevel.INTERMEDIATE,
+                50,GymLocation.AVIATIEI,"This very energetic, totally contactless workout will help you, blow by blow " +
+                "to find the path to the desired physical condition and burn up to 700 calories along the way.",11.00,
+                DayOfWeek.MONDAY, 5);
+        GymClass gymClassAnnuallyBodyCombat2 = new GymClass("BODY_COMBAT12", Activity.BODY_COMBAT,20, TrainingLevel.ADVANCED,
+                50,GymLocation.TITAN,"This very energetic, totally contactless workout will help you, blow by blow " +
+                "to find the path to the desired physical condition and burn up to 700 calories along the way.",11.00,
+                DayOfWeek.SATURDAY, 5);
+
+        annuallyList.add(gymClassAnnuallyAqua);
+        annuallyList.add(gymClassAnnuallyAqua2);
+        annuallyList.add(gymClassAnnuallyAqua3);
+        annuallyList.add(gymClassAnnuallyAqua4);
+        annuallyList.add(gymClassAnnuallyAqua5);
+        annuallyList.add(gymClassAnnuallyBagBoxing1);
+        annuallyList.add(gymClassAnnuallyBagBoxing2);
+        annuallyList.add(gymClassAnnuallyBagBoxing3);
+        annuallyList.add(gymClassAnnuallyBagBoxing4);
+        annuallyList.add(gymClassAnnuallyBagBoxing5);
+        annuallyList.add(gymClassAnnuallyBodyCombat1);
+        annuallyList.add(gymClassAnnuallyBodyCombat2);
+        annuallyList.add(gymClassAnnuallySpinning1);
+        annuallyList.add(gymClassAnnuallySpinning2);
+
+        List<Membership> membershipList = new ArrayList<>();
+
+        //WEEKDAY
+        //WEEKEND
+        //MONTHLY
+        //ANNUALY
+
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+
+        String startDateString = "01/05/2021";
+        Date startDate = null;
+        try {
+            startDate = format.parse(startDateString);
+            }
+        catch (ParseException e) {
+            System.out.println("Invalid input string for date");
+         }
+
+        Date registrationDate = new Date();
+
+        Membership membership1 = new Membership("AB1_annualy","Aviatiei, Titan, Militari, " +
+                "plus all gold, Silver and Bronze clubs. Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
+                "33 areas of fitness, cardio and strength.", 2400,registrationDate,startDate,
+                MembershipType.ANNUALY,5 ,annuallyList);
+
+        String startDateStringAB2 = "01/04/2021";
+        Date startDateAB2 = null;
+        try {
+            startDateAB2 = format.parse(startDateStringAB2);
+        }
+        catch (ParseException e) {
+            System.out.println("Invalid input string for date");
+        }
+        Membership membership2 = new Membership("AB2_annualy","Aviatiei, Titan, Militari " +
+                "plus all gold, Silver and Bronze clubs. Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
+                "33 areas of fitness, cardio and strength.", 2400,registrationDate,startDateAB2,
+                MembershipType.ANNUALY,3 ,annuallyList );
+
+        String startDateStringAB3 = "15/05/2021";
+        Date startDateAB3 = null;
+        try {
+            startDateAB3 = format.parse(startDateStringAB3);
+        }
+        catch (ParseException e) {
+            System.out.println("Invalid input string for date");
+        }
+        Membership membership3 = new Membership("AB3_weekend","Aviatiei, Titan, Militari " +
+                "plus all gold, Silver and Bronze clubs. Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
+                "33 areas of fitness, cardio and strength.", 1000,registrationDate,startDateAB3,
+                MembershipType.WEEKEND,2 ,weekendList );
+
+
+        return membershipList;
+
+
+}
 }

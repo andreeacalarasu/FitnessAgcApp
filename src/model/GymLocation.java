@@ -6,8 +6,6 @@ public enum GymLocation {
         MILITARI(2,"Militari"),
         TITAN(3, "Titan");
 
-
-
         private int cod;
         private String description;
 
