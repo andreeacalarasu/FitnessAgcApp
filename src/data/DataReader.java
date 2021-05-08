@@ -19,7 +19,7 @@ import static java.lang.Boolean.parseBoolean;
 public class DataReader {
 
     private static final String PATH = "./resources/Clients.txt";
-
+    private static final String PATH2 = "./resources/listOfGymClass.txt";
     public List<Client> readListOfClients(){
             List<Client> clientList = new ArrayList<>();
             File file = new File(PATH);
@@ -56,7 +56,7 @@ public class DataReader {
                 }
             }
             catch(IOException e){
-                System.out.println("Nu s-a facut citirea");
+                System.out.println("The file cannot be read.");
 
             }
             finally {
@@ -65,7 +65,7 @@ public class DataReader {
                         fileReader.close();
                     }
                     if (bufferedReader != null) {
-                        bufferedReader.close();// elibereaza memoria
+                        bufferedReader.close();
                     }
                 } catch (IOException e) {
 
@@ -76,7 +76,7 @@ public class DataReader {
 
     public List<GymClass> readListOfGymClasses(){
             List<GymClass> gymClassList = new ArrayList<>();
-            File file = new File(PATH);
+            File file = new File(PATH2);
             if (!file.exists()) {
             System.out.println("The file does not exists. Please check the path.");
             return gymClassList;
@@ -100,12 +100,8 @@ public class DataReader {
             String classDescriptionString = words[6].trim();
             String trainingClassTimeString = words[7].trim();
             String dayOfWeekString = words[8].trim();
-            String trainerString = words[9].trim();
-            String idString = words[10].trim();
-            String nameString = words[11].trim();
-            String emailString = words[12].trim();
-            String mobileString = words[13].trim();
-            String pricePerHourString = words[14].trim();
+            String idString = words[9].trim();
+
 
             //String code, Activity activity,int noOfClients,TrainingLevel trainingLevel, int classDuration, GymLocation location,
             // String classDescription,double trainingClassTime,DayOfWeek dayOfWeek, Trainer trainer
@@ -127,7 +123,7 @@ public class DataReader {
         }
     }
             catch(IOException e){
-        System.out.println("Nu s-a facut citirea");
+        System.out.println("The file cannot be read.");
 
     }
             finally {
@@ -136,7 +132,7 @@ public class DataReader {
                 fileReader.close();
             }
             if (bufferedReader != null) {
-                bufferedReader.close();// elibereaza memoria
+                bufferedReader.close();
             }
         } catch (IOException e) {
 

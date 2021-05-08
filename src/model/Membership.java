@@ -61,6 +61,6 @@ public class Membership {
     public String toString(){
         return "Code number : " + code + ", Membership description : " + description + ", Price : "+ price +
                 ", Registration Date : " + registrationDate + ", Start date : " + startDate+", Membership Type : " +
-                membershipType + ", Client ID : " + clientID + ", GymClass List : " + gymClassList;
+                membershipType + ", Client ID : " + clientID + ", GymClass List : " + gymClassList + "\n";
     }
 }

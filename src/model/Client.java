@@ -87,7 +87,7 @@ public class Client {
     public String toString() {
         return "ID number : " + id + ", CNP : " + cnp + ", First Name : " + firstName +
                 ", Last Name : " + lastName + ", Mobile : " + mobile + ", Address : " +
-                address;
+                address + "\n";
     }
 
 }

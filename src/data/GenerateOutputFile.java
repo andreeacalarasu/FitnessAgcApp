@@ -1,6 +1,7 @@
 package data;
 
 import model.Client;
+import model.GymClass;
 import model.Membership;
 
 import java.io.BufferedWriter;
@@ -23,7 +24,7 @@ public class GenerateOutputFile {
             try {
                 file.createNewFile();
             } catch (IOException e) {
-                System.out.println("NU s-a reusit crearea fisierului");
+                System.out.println("The file cannot be created.");
             }
         }
         FileWriter fw = null;
@@ -33,22 +34,53 @@ public class GenerateOutputFile {
             fw = new FileWriter(file);
             bw = new BufferedWriter(fw);
 
-            bw.write("...mesaj abonare ...fiecare linie o propozitie");
-            bw.newLine();//adauga linie noua
-            bw.write("Bucuresti");
+            bw.write("Hello, " + client.getFirstName() + "!");
+            bw.newLine();
+            bw.write("Welcome to the FITNESS AGC.");
+            bw.newLine();
+            bw.write("Our trainers are ready to help you get in the best shape of your life!");
+            bw.newLine();
+            bw.write("Drop by for a free lesson or reply with SCHEDULE for a full run-down of this month’s classes.");
+            bw.newLine();
+            bw.write("The type of membership you chose determines your level of access to the gyms across the network.");
+            bw.newLine();
+            bw.write("Please see below the information provided on multi-gym access which shows the access levels " +
+                    "related to your membership.");
+            bw.newLine();
+            bw.write("Client ID: " + client.getId());
+            bw.newLine();
+            bw.write("Firstname: " + client.getFirstName());
+            bw.newLine();
+            bw.write("Lastname: " + client.getLastName());
+            bw.newLine();
+            bw.write("Membership code: " +  membership.getCode());
+            bw.newLine();
+            bw.write("Membership type: " +  membership.getMembershipType());
+            bw.newLine();
+            bw.write("Membership cost (RON, VAT included): " +  membership.getPrice());
+            bw.newLine();
+            bw.write("Membership registration date: " +  membership.getRegistrationDate());
+            bw.newLine();
+            bw.write("Membership start date: " +  membership.getStartDate());
+            bw.newLine();
+            bw.write("Membership description: " +  membership.getDescription());
+            bw.newLine();
+            bw.write("Thank you for choosing us. ");
+            bw.newLine();
+            bw.write("See you soon! Stay fit!");
             bw.newLine();
 
-            bw.flush();//verifica daca au fost scrisi toti bitii intr-un fisier
+            bw.flush();
 
         } catch (IOException ex) {
-            System.out.println("Nu s-a reusit scrierea in fisier");
+            System.out.println("Failed to write to file.");
         } finally {
             try {
                 if (fw != null) {
                     fw.close();
                 }
                 if (bw != null) {
-                    bw.close();// elibereaza memoria
+                    bw.close();
                 }
             } catch (IOException e) {
 

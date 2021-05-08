@@ -66,6 +66,6 @@ public class GymClass {
         return "Code number : " + code + ", Activity : " + activity + ", Number of clients : "+ noOfClients +
                 ", Training Level : " + trainingLevel + ", Class Duration : " + classDuration +", Location : " +
                 location + ", Class Description : " + classDescription + ", Training Class Time : " + trainingClassTime +
-                ", Day of The Week: " + dayOfWeek + ", Trainer : " + trainerID;}
+                ", Day of The Week: " + dayOfWeek + ", Trainer : " + trainerID + "\n";}
 
 }

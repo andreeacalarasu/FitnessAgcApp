@@ -47,6 +47,6 @@ public class Trainer {
     @Override
     public String toString() {
         return "ID number : " + id + ", Trainer name : " + name + ", Email : " + email +
-                ", Mobile : " + mobile + ", Price per hour : " + pricePerHour;
+                ", Mobile : " + mobile + ", Price per hour : " + pricePerHour + "\n";
     }
 }
