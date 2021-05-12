@@ -1,14 +1,8 @@
 package manager;
 
-import model.Activity;
-import model.DayOfWeek;
-import model.GymClass;
-import model.GymLocation;
+import model.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class GymClassManager {
     public void updateNoOfClientsPerGymClass(List<GymClass> gymClassList, int newNoOfClientsPerGymClass){
@@ -28,7 +22,7 @@ public class GymClassManager {
     public GymClass findGymClassByCode(List<GymClass> gymClassList, String gymClassCodeToLookFor) {
         GymClass gymClass= null;
         for(GymClass gymClass2: gymClassList){
-            if(gymClass2.equals(gymClassCodeToLookFor)){
+            if(gymClass2.getCode().equals(gymClassCodeToLookFor)){
                 gymClass = gymClass2;
             }
         }
@@ -64,7 +58,7 @@ public class GymClassManager {
     public List<GymClass> filterListOfGymClassByLocation(List<GymClass> gymClassList, GymLocation givenLocation){
         List<GymClass> resultListOfGymClassByLocation = new ArrayList<>();
         for (GymClass gymClass : gymClassList){
-            if(gymClass.equals(givenLocation)){
+            if(gymClass.getLocation().equals(givenLocation)){
                 resultListOfGymClassByLocation.add(gymClass);
             }
         }
@@ -88,7 +82,7 @@ public class GymClassManager {
         }
         return resultListOfGymClassWithNoOfClientsBiggerThanGivenValue;
     }
-    public Map<GymLocation, Integer> filterListOfGymLocationWithMaximumGymClasses(List<GymClass> gymClassList) {
+    public Map<GymLocation, Integer> extractListOfGymLocationWithMaximumGymClasses(List<GymClass> gymClassList) {
         Map<GymLocation, Integer> resultLocationMap = new HashMap<>();
         for (GymClass gymClass : gymClassList) {
             GymLocation gymLocation = gymClass.getLocation();
@@ -102,4 +96,42 @@ public class GymClassManager {
         }
         return resultLocationMap;
     }
+
+    public Map<GymLocation, List<GymClass>> extractGymClassesByGymLocation(List<GymClass> gymClassList) {
+        Map<GymLocation, List<GymClass>> resultGymClassesByGymLocation = new HashMap<>();
+        for(GymLocation gymLocation: GymLocation.values()){
+            List<GymClass> resultGymClasses = new ArrayList<>();
+            for(GymClass gymClass: gymClassList){
+                if(gymClass.getLocation()==gymLocation){
+                    resultGymClasses.add(gymClass);
+                }
+            }
+            resultGymClassesByGymLocation.put(gymLocation,resultGymClasses);
+        }
+        return resultGymClassesByGymLocation;
+    }
+
+    public Map<Integer, Integer> extractNoOfGymClassesByTrainerId(List<Trainer> trainerList, List<GymClass> gymClassList) {
+        Map<Integer, Integer> resultNoOfGymClassesByTrainerId = new HashMap<>();
+        for (Trainer trainer : trainerList) {
+            int resultNoOfGymClasses = 0;
+            for (GymClass gymClass : gymClassList) {
+                if(trainer.getId() == gymClass.getTrainerID()){
+                    resultNoOfGymClasses ++;
+                }
+            }
+            resultNoOfGymClassesByTrainerId.put(trainer.getId(),resultNoOfGymClasses) ;
+        }
+        return  resultNoOfGymClassesByTrainerId;
+    }
+
+    public void addGymClassToListOfGymClass(List<GymClass> gymClassList, GymClass newGymClass){
+        gymClassList.add(newGymClass);
+    }
+
+    public void removeGymClassFromListOfGymClass2(List<GymClass> gymClassList, GymClass gymClassToBeRemoved){
+        GymClass gymClass = null;
+        gymClassList.remove(gymClassToBeRemoved);
+    }
+
 }

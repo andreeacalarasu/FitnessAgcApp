@@ -1,11 +1,11 @@
 package manager;
 
+import model.Client;
+import model.CustomizedMembership;
 import model.Membership;
 import model.MembershipType;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class MembershipManager {
     public void updateRegistrationDateOfMembership(List<Membership> membershipList, Date newRegistrationDate ){
@@ -52,4 +52,27 @@ public class MembershipManager {
         return resultListOfMembershipByMembershipType;
     }
 
+    public Map<Integer, List<String>> extractMembershipByClientId(List<Client> clientList, List<Membership> membershipList) {
+        Map<Integer, List<String>> resultMembershipByClientId = new HashMap<>();
+        for(Client client:clientList) {
+            List<String> membershipCodeList = new ArrayList<>();
+            for (Membership membership : membershipList) {
+                if (client.getId()==membership.getClientID() ){
+                    membershipCodeList.add(membership.getCode());
+                }
+                resultMembershipByClientId.put(client.getId(), membershipCodeList);
+            }
+        }
+        return resultMembershipByClientId;
+    }
+
+    public void applyDiscountToCustomizedMembership(List<Membership> membershipList, String givenMembershipCode){
+
+        for(Membership membership: membershipList){
+            if(membership.getCode().equals(givenMembershipCode)){
+               CustomizedMembership customizedMembership1 = (CustomizedMembership) membership;
+               customizedMembership1.applyDiscount(20);
+            }
+        }
+    }
 }

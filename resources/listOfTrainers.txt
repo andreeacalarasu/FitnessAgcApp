@@ -1,0 +1,5 @@
+1;George Mares;george.mares@fitnessagc.ro;0753044021;100
+2;Alina Craciun;alina.craciun@fitnessagc.ro;0744312745;110
+3;Maria Marinescu;maria.marinescu@fitnessagc.ro;0721125888;90
+4;Alexandru Calin;alexandru.calin@fitnessagc.ro;0744332547;120
+5;Alin Iofcea;alin.iofcea@fitnessagc.ro;0741158745;110

@@ -145,6 +145,7 @@ public class DataCreator {
         weekendList.add(gymClassWeekendBodyCombat2);
         weekendList.add(gymClassWeekendSpinning2);
 
+
         List<GymClass> monthlyList = new ArrayList<>();
 
         GymClass gymClassMonthlyAqua = new GymClass("AQUA11",Activity.AQUA,5,TrainingLevel.BEGINNER,
@@ -364,7 +365,7 @@ public class DataCreator {
         }
         Membership membership5 = new Membership("AB5_monthly","Aviatiei, Titan, Militari. " +
                 "Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
-                "33 areas of fitness, cardio and strength.", 300,registrationDate,startDateAB4,
+                "33 areas of fitness, cardio and strength.", 300,registrationDate,startDateAB5,
                 MembershipType.WEEKEND,5 ,monthlyList );
 
         String startDateStringAB6 = "23/04/2021";
@@ -377,7 +378,7 @@ public class DataCreator {
         }
         Membership membership6 = new Membership("AB6_weekend","Aviatiei, Titan, Militari. " +
                 "Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
-                "33 areas of fitness, cardio and strength.", 150,registrationDate,startDateAB3,
+                "33 areas of fitness, cardio and strength.", 150,registrationDate,startDateAB6,
                 MembershipType.WEEKEND,6 ,weekendList );
 
         String startDateStringAB7 = "13/04/2021";
@@ -390,7 +391,7 @@ public class DataCreator {
         }
         Membership membership7 = new Membership("AB7_monthly","Aviatiei, Titan, Militari. " +
                 "Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
-                "33 areas of fitness, cardio and strength.", 300,registrationDate,startDateAB4,
+                "33 areas of fitness, cardio and strength.", 300,registrationDate,startDateAB7,
                 MembershipType.WEEKEND,7 ,monthlyList );
 
         String startDateStringAB8 = "01/05/2021";
@@ -403,7 +404,7 @@ public class DataCreator {
         }
         Membership membership8 = new Membership("AB8_monthly","Aviatiei, Titan, Militari. " +
                 "Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
-                "33 areas of fitness, cardio and strength.", 300,registrationDate,startDateAB4,
+                "33 areas of fitness, cardio and strength.", 300,registrationDate,startDateAB8,
                 MembershipType.WEEKEND,8 ,monthlyList );
 
         String startDateStringAB9 = "01/05/2021";
@@ -414,10 +415,17 @@ public class DataCreator {
         catch (ParseException e) {
             System.out.println("Invalid input string for date");
         }
-        Membership membership9 = new Membership("AB9_annualy","Aviatiei, Titan, Militari. " +
+
+        Trainer trainer1 = new Trainer (1, "George Mares", "george.mares@fitnessagc.ro",
+                "0753044021",100);
+        Trainer trainer2 = new Trainer (2, "Alina Craciun", "alina.craciun@fitnessagc.ro",
+                "0744312745",110);
+
+        Membership membership9 = new CustomizedMembership("AB9_annualy", "Aviatiei, Titan, Militari. " +
                 " Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
-                "33 areas of fitness, cardio and strength.", 2000,registrationDate,startDateAB2,
-                MembershipType.ANNUALY,9 ,annuallyList );
+                "33 areas of fitness, cardio and strength.",2000,registrationDate,startDateAB9,MembershipType.ANNUALY,
+                9,annuallyList,trainer1,15,GymLocation.MILITARI);
+
 
         String startDateStringAB10 = "01/05/2021";
         Date startDateAB10 = null;
@@ -427,13 +435,23 @@ public class DataCreator {
         catch (ParseException e) {
             System.out.println("Invalid input string for date");
         }
-        Membership membership10 = new Membership("AB10_annualy","Aviatiei, Titan, Militari. " +
+        Membership membership10 = new CustomizedMembership("AB10_annualy","Aviatiei, Titan, Militari. " +
                 " Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
-                "33 areas of fitness, cardio and strength.", 2000,registrationDate,startDateAB2,
-                MembershipType.ANNUALY,10 ,annuallyList );
+                "33 areas of fitness, cardio and strength.", 2000,registrationDate,startDateAB10,
+                MembershipType.ANNUALY,10 ,annuallyList,trainer2, 12,GymLocation.AVIATIEI );
 
-
+        membershipList.add(membership1);
+        membershipList.add(membership2);
+        membershipList.add(membership3);
+        membershipList.add(membership4);
+        membershipList.add(membership5);
+        membershipList.add(membership6);
+        membershipList.add(membership7);
+        membershipList.add(membership8);
+        membershipList.add(membership9);
+        membershipList.add(membership10);
         return membershipList;
+
 
 
     }

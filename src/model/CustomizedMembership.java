@@ -8,7 +8,7 @@ public class CustomizedMembership extends Membership implements Discountable {
     private int noOfPrivateHours;
     private GymLocation location;
 
-    public CustomizedMembership(String code, String description,double price, Activity activity, Date registrationDate,
+    public CustomizedMembership(String code, String description,double price, Date registrationDate,
                                 Date startDate, MembershipType membershipType, int clientID, List<GymClass> gymClassList,
                                 Trainer trainer, int noOfPrivateHours, GymLocation location) {
         super(code, description, price, registrationDate, startDate, membershipType, clientID, gymClassList);
@@ -43,7 +43,7 @@ public class CustomizedMembership extends Membership implements Discountable {
 
     @Override
     public double getPrice(){
-        double basicPrice = getPrice();
+        double basicPrice = super.getPrice();
         double pricePerHour = trainer.getPricePerHour();
         double privateHoursPrice = noOfPrivateHours*pricePerHour;
         double totalPrice = basicPrice+privateHoursPrice;
@@ -52,7 +52,7 @@ public class CustomizedMembership extends Membership implements Discountable {
     @Override
     public void applyDiscount(int percent){
         double newPrice;
-        double actualPrice =getPrice();
+        double actualPrice = super.getPrice();
         newPrice = actualPrice - (actualPrice*percent/100);
         setPrice(newPrice);
 

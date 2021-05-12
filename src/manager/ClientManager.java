@@ -7,12 +7,12 @@ import model.Trainer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonManager {
+public class ClientManager {
 
 
-    public void updateClientMobile(List<Client> clientList, String newClientMobile){
+    public void updateClientMobile(List<Client> clientList, String newClientMobile,int clientID){
         for(Client client : clientList){
-            if(client.getMobile().equals(newClientMobile)){
+            if( client.getId()==clientID){
                 client.setMobile(newClientMobile);
             }
         }
