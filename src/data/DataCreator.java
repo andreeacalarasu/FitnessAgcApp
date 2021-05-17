@@ -310,10 +310,10 @@ public class DataCreator {
 
         Date registrationDate = new Date();
 
-        Membership membership1 = new Membership("AB1_annualy","Aviatiei, Titan, Militari. " +
+        Membership membership1 = new Membership("AB1_annually","Aviatiei, Titan, Militari. " +
                 " Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
                 "33 areas of fitness, cardio and strength.", 2000,registrationDate,startDateAB1,
-                MembershipType.ANNUALY,1 ,annuallyList);
+                MembershipType.ANNUALLY,1 ,annuallyList);
 
         String startDateStringAB2 = "01/04/2021";
         Date startDateAB2 = null;
@@ -323,10 +323,10 @@ public class DataCreator {
         catch (ParseException e) {
             System.out.println("Invalid input string for date");
         }
-        Membership membership2 = new Membership("AB2_annualy","Aviatiei, Titan, Militari. " +
+        Membership membership2 = new Membership("AB2_annually","Aviatiei, Titan, Militari. " +
                 " Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
                 "33 areas of fitness, cardio and strength.", 2000,registrationDate,startDateAB2,
-                MembershipType.ANNUALY,2 ,annuallyList );
+                MembershipType.ANNUALLY,2 ,annuallyList );
 
         String startDateStringAB3 = "10/04/2021";
         Date startDateAB3 = null;
@@ -352,7 +352,7 @@ public class DataCreator {
         Membership membership4 = new Membership("AB4_weekday","Aviatiei, Titan, Militari. " +
                 "Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
                 "33 areas of fitness, cardio and strength.", 250,registrationDate,startDateAB4,
-                MembershipType.WEEKEND,4 ,weekdayList );
+                MembershipType.WEEKDAY,4 ,weekdayList );
 
 
         String startDateStringAB5 = "13/04/2021";
@@ -366,7 +366,7 @@ public class DataCreator {
         Membership membership5 = new Membership("AB5_monthly","Aviatiei, Titan, Militari. " +
                 "Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
                 "33 areas of fitness, cardio and strength.", 300,registrationDate,startDateAB5,
-                MembershipType.WEEKEND,5 ,monthlyList );
+                MembershipType.MONTHLY,5 ,monthlyList );
 
         String startDateStringAB6 = "23/04/2021";
         Date startDateAB6 = null;
@@ -392,7 +392,7 @@ public class DataCreator {
         Membership membership7 = new Membership("AB7_monthly","Aviatiei, Titan, Militari. " +
                 "Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
                 "33 areas of fitness, cardio and strength.", 300,registrationDate,startDateAB7,
-                MembershipType.WEEKEND,7 ,monthlyList );
+                MembershipType.MONTHLY,7 ,monthlyList );
 
         String startDateStringAB8 = "01/07/2021";
         Date startDateAB8 = null;
@@ -405,7 +405,7 @@ public class DataCreator {
         Membership membership8 = new Membership("AB8_monthly","Aviatiei, Titan, Militari. " +
                 "Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
                 "33 areas of fitness, cardio and strength.", 300,registrationDate,startDateAB8,
-                MembershipType.WEEKEND,8 ,monthlyList );
+                MembershipType.MONTHLY,8 ,monthlyList );
 
         String startDateStringAB9 = "01/05/2021";
         Date startDateAB9 = null;
@@ -421,13 +421,13 @@ public class DataCreator {
         Trainer trainer2 = new Trainer (2, "Alina Craciun", "alina.craciun@fitnessagc.ro",
                 "0744312745",110);
 
-        Membership membership9 = new CustomizedMembership("AB9_annualy", "Aviatiei, Titan, Militari. " +
+        Membership membership9 = new CustomizedMembership("AB9_annually", "Aviatiei, Titan, Militari. " +
                 " Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
-                "33 areas of fitness, cardio and strength.",2000,registrationDate,startDateAB9,MembershipType.ANNUALY,
+                "33 areas of fitness, cardio and strength.",2000,registrationDate,startDateAB9,MembershipType.ANNUALLY,
                 9,annuallyList,trainer1,15,GymLocation.MILITARI);
 
 
-        String startDateStringAB10 = "01/07/2021";
+        String startDateStringAB10 = "01/08/2021";
         Date startDateAB10 = null;
         try {
             startDateAB10 = format.parse(startDateStringAB10);
@@ -435,10 +435,10 @@ public class DataCreator {
         catch (ParseException e) {
             System.out.println("Invalid input string for date");
         }
-        Membership membership10 = new CustomizedMembership("AB10_annualy","Aviatiei, Titan, Militari. " +
+        Membership membership10 = new CustomizedMembership("AB10_annually","Aviatiei, Titan, Militari. " +
                 " Outdoor Pool, Squash land, Football land, Sauna, Kids activities, " +
                 "33 areas of fitness, cardio and strength.", 2000,registrationDate,startDateAB10,
-                MembershipType.ANNUALY,10 ,annuallyList,trainer2, 12,GymLocation.AVIATIEI );
+                MembershipType.ANNUALLY,10 ,annuallyList,trainer2, 12,GymLocation.AVIATIEI );
 
         membershipList.add(membership1);
         membershipList.add(membership2);

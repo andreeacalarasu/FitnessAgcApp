@@ -72,7 +72,9 @@ public class MembershipManager {
             if(membership.getCode().equals(givenMembershipCode)){
                CustomizedMembership customizedMembership1 = (CustomizedMembership) membership;
                customizedMembership1.applyDiscount(20);
+                System.out.println("Discounted price of CustomizedMembership is: " + customizedMembership1.getPrice()+"\n");
             }
+
         }
     }
 }

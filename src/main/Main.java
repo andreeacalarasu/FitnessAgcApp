@@ -3,6 +3,7 @@ package main;
 
 import data.DataCreator;
 import data.DataReader;
+import data.GenerateOutputFile;
 import manager.GymClassManager;
 import manager.MembershipManager;
 import manager.ClientManager;
@@ -151,7 +152,7 @@ public class Main {
         System.out.println(resultMembershipFilter2 + "\n");
 
         System.out.println("filterListOfMembershipByMembershipType method below: " + "\n");
-        List<Membership> resultFilterMembershipType = membershipManager.filterListOfMembershipByMembershipType(membershipList, MembershipType.WEEKDAY);
+        List<Membership> resultFilterMembershipType = membershipManager.filterListOfMembershipByMembershipType(membershipList, MembershipType.WEEKEND);
         System.out.println(resultFilterMembershipType + "\n");
 
         System.out.println("extractMembershipByClientId method below: "+ "\n");
@@ -160,7 +161,7 @@ public class Main {
 
         System.out.println("applyDiscountToCustomizedMembership method below: " + "\n");
         membershipManager.applyDiscountToCustomizedMembership(membershipList,"AB9_annually");
-        System.out.println(membershipList + "\n");
+
 
 
         ClientManager clientManager = new ClientManager();
@@ -177,6 +178,10 @@ public class Main {
         List<Membership> resultListClientFilter = clientManager.filterListOfMembershipByClient(membershipList,10);
         System.out.println( resultListClientFilter + "\n");
 
+        Membership membership1 = membershipList.get(0);
+        Client client1 = clientList.get(0);
+        GenerateOutputFile generateOutputFile = new GenerateOutputFile();
+        generateOutputFile.generateFile(membership1, client1);
 
 
 

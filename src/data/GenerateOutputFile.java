@@ -34,9 +34,9 @@ public class GenerateOutputFile {
             fw = new FileWriter(file);
             bw = new BufferedWriter(fw);
 
-            bw.write("Hello, " + client.getFirstName() + "!");
+            bw.write("Hello, " + client.getFirstName() + "! \n");
             bw.newLine();
-            bw.write("Welcome to the FITNESS AGC.");
+            bw.write("Welcome to FITNESS AGC.");
             bw.newLine();
             bw.write("Our trainers are ready to help you get in the best shape of your life!");
             bw.newLine();
@@ -45,7 +45,7 @@ public class GenerateOutputFile {
             bw.write("The type of membership you chose determines your level of access to the gyms across the network.");
             bw.newLine();
             bw.write("Please see below the information provided on multi-gym access which shows the access levels " +
-                    "related to your membership.");
+                    "related to your membership." + "\n");
             bw.newLine();
             bw.write("Client ID: " + client.getId());
             bw.newLine();
@@ -61,13 +61,19 @@ public class GenerateOutputFile {
             bw.newLine();
             bw.write("Membership registration date: " +  membership.getRegistrationDate());
             bw.newLine();
-            bw.write("Membership start date: " +  membership.getStartDate());
+            bw.write("Membership start date: " +  membership.getStartDate() + "\n");
             bw.newLine();
-            bw.write("Membership description: " +  membership.getDescription());
+            bw.write("Membership description: \n" +  membership.getDescription() + "\n");
+            bw.newLine();
+            bw.write("Access level related to your membership: \n" + membership.toString());
             bw.newLine();
             bw.write("Thank you for choosing us. ");
             bw.newLine();
-            bw.write("See you soon! Stay fit!");
+            bw.write("See you soon! Stay fit!\n ");
+            bw.newLine();
+            bw.write("Best regards, \n ");
+            bw.newLine();
+            bw.write("Fitness AGC Team ");
             bw.newLine();
 
             bw.flush();

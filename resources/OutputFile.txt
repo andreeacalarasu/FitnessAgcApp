@@ -1,0 +1,43 @@
+Hello, Elena! 
+
+Welcome to FITNESS AGC.
+Our trainers are ready to help you get in the best shape of your life!
+Drop by for a free lesson or reply with SCHEDULE for a full run-down of this month’s classes.
+The type of membership you chose determines your level of access to the gyms across the network.
+Please see below the information provided on multi-gym access which shows the access levels related to your membership.
+
+Client ID: 1
+Firstname: Elena
+Lastname: Paval
+Membership code: AB1_annually
+Membership type: ANNUALLY
+Membership cost (RON, VAT included): 2000.0
+Membership registration date: Mon May 17 21:16:19 EEST 2021
+Membership start date: Thu Apr 01 00:00:00 EEST 2021
+
+Membership description: 
+Aviatiei, Titan, Militari.  Outdoor Pool, Squash land, Football land, Sauna, Kids activities, 33 areas of fitness, cardio and strength.
+
+Access level related to your membership: 
+Code number : AB1_annually, Membership description : Aviatiei, Titan, Militari.  Outdoor Pool, Squash land, Football land, Sauna, Kids activities, 33 areas of fitness, cardio and strength., Price : 2000.0, Registration Date : Mon May 17 21:16:19 EEST 2021, Start date : Thu Apr 01 00:00:00 EEST 2021, Membership Type : ANNUALLY, Client ID : 1, GymClass List : [Code number : AQUA11, Activity : AQUA, Number of clients : 5, Training Level : BEGINNER, Class Duration : 50, Location : AVIATIEI, Class Description : Improves blood circulation, lymphatic system, tones the entire body and increases resistance – all in one workout., Training Class Time : 9.0, Day of The Week: MONDAY, Trainer : 1
+, Code number : AQUA12, Activity : AQUA, Number of clients : 10, Training Level : INTERMEDIATE, Class Duration : 50, Location : MILITARI, Class Description : Improves blood circulation, lymphatic system, tones the entire body and increases resistance – all in one workout., Training Class Time : 9.0, Day of The Week: WEDNESDAY, Trainer : 1
+, Code number : AQUA13, Activity : AQUA, Number of clients : 10, Training Level : ADVANCED, Class Duration : 50, Location : TITAN, Class Description : Improves blood circulation, lymphatic system, tones the entire body and increases resistance – all in one workout., Training Class Time : 9.0, Day of The Week: FRIDAY, Trainer : 1
+, Code number : AQUA14, Activity : AQUA, Number of clients : 5, Training Level : BEGINNER, Class Duration : 50, Location : AVIATIEI, Class Description : Improves blood circulation, lymphatic system, tones the entire body and increases resistance – all in one workout., Training Class Time : 11.3, Day of The Week: SUNDAY, Trainer : 2
+, Code number : AQUA15, Activity : AQUA, Number of clients : 10, Training Level : INTERMEDIATE, Class Duration : 50, Location : MILITARI, Class Description : Improves blood circulation, lymphatic system, tones the entire body and increases resistance – all in one workout., Training Class Time : 11.3, Day of The Week: SATURDAY, Trainer : 2
+, Code number : BAG_BOXING11, Activity : BAG_BOXING, Number of clients : 20, Training Level : BEGINNER, Class Duration : 50, Location : AVIATIEI, Class Description : The punching bag, a pair of boxing gloves and great music are all you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve whole-body coordination., Training Class Time : 14.0, Day of The Week: TUESDAY, Trainer : 3
+, Code number : BAG_BOXING12, Activity : BAG_BOXING, Number of clients : 20, Training Level : INTERMEDIATE, Class Duration : 50, Location : MILITARI, Class Description : The punching bag, a pair of boxing gloves and great music are all you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve whole-body coordination., Training Class Time : 14.0, Day of The Week: MONDAY, Trainer : 3
+, Code number : BAG_BOXING13, Activity : BAG_BOXING, Number of clients : 20, Training Level : ADVANCED, Class Duration : 50, Location : TITAN, Class Description : The punching bag, a pair of boxing gloves and great music are all you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve whole-body coordination., Training Class Time : 14.0, Day of The Week: FRIDAY, Trainer : 4
+, Code number : BAG_BOXING14, Activity : BAG_BOXING, Number of clients : 20, Training Level : BEGINNER, Class Duration : 50, Location : AVIATIEI, Class Description : The punching bag, a pair of boxing gloves and great music are all you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve whole-body coordination., Training Class Time : 14.0, Day of The Week: SATURDAY, Trainer : 4
+, Code number : BAG_BOXING15, Activity : BAG_BOXING, Number of clients : 20, Training Level : INTERMEDIATE, Class Duration : 50, Location : MILITARI, Class Description : The punching bag, a pair of boxing gloves and great music are all you need to melt your stress. Movement around the bag and combinations of punches and kicks will improve your coordination. Keeping on the toes and shifting weight from one foot to another to strike will help improve balance and therefore improve whole-body coordination., Training Class Time : 14.0, Day of The Week: SUNDAY, Trainer : 4
+, Code number : BODY_COMBAT11, Activity : BODY_COMBAT, Number of clients : 20, Training Level : INTERMEDIATE, Class Duration : 50, Location : AVIATIEI, Class Description : This very energetic, totally contactless workout will help you, blow by blow to find the path to the desired physical condition and burn up to 700 calories along the way., Training Class Time : 11.0, Day of The Week: MONDAY, Trainer : 5
+, Code number : BODY_COMBAT12, Activity : BODY_COMBAT, Number of clients : 20, Training Level : ADVANCED, Class Duration : 50, Location : TITAN, Class Description : This very energetic, totally contactless workout will help you, blow by blow to find the path to the desired physical condition and burn up to 700 calories along the way., Training Class Time : 11.0, Day of The Week: SATURDAY, Trainer : 5
+, Code number : SPINNING11, Activity : SPINNING, Number of clients : 20, Training Level : BEGINNER, Class Duration : 50, Location : TITAN, Class Description : Is based on alternating periods of effort and active recovery in a training session, which means a series of planned alternations between high-intensity anaerobic areas (85%) and aerobic, low-intensity (65%). , Training Class Time : 18.0, Day of The Week: TUESDAY, Trainer : 2
+, Code number : SPINNING12, Activity : SPINNING, Number of clients : 20, Training Level : INTERMEDIATE, Class Duration : 50, Location : TITAN, Class Description : Is based on alternating periods of effort and active recovery in a training session, which means a series of planned alternations between high-intensity anaerobic areas (85%) and aerobic, low-intensity (65%). , Training Class Time : 18.0, Day of The Week: SUNDAY, Trainer : 2
+]
+
+Thank you for choosing us. 
+See you soon! Stay fit!
+ 
+Best regards, 
+ 
+Fitness AGC Team 
