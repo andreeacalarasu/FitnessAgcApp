@@ -129,8 +129,7 @@ public class GymClassManager {
         gymClassList.add(newGymClass);
     }
 
-    public void removeGymClassFromListOfGymClass2(List<GymClass> gymClassList, GymClass gymClassToBeRemoved){
-        GymClass gymClass = null;
+    public void removeGymClassFromListOfGymClass(List<GymClass> gymClassList, GymClass gymClassToBeRemoved){
         gymClassList.remove(gymClassToBeRemoved);
     }
 

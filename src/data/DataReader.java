@@ -14,8 +14,6 @@ import java.util.List;
 
 import static java.lang.Boolean.parseBoolean;
 
-//ceea ce se vinde
-//citire din fisier => list
 public class DataReader {
 
     private static final String PATH = "./resources/listOfClients.txt";

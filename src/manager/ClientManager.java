@@ -2,7 +2,7 @@ package manager;
 
 import model.Client;
 import model.Membership;
-import model.Trainer;
+
 
 import java.util.ArrayList;
 import java.util.List;

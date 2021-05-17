@@ -2,7 +2,7 @@ package manager;
 
 import model.*;
 
-import javax.security.auth.login.AccountExpiredException;
+
 import java.util.*;
 
 public class TrainerManager {

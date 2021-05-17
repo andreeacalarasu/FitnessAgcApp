@@ -9,7 +9,6 @@ import manager.ClientManager;
 import manager.TrainerManager;
 import model.*;
 
-import java.sql.SQLOutput;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -21,15 +20,15 @@ public class Main {
 
         DataCreator dataCreator = new DataCreator();
         List<Membership> membershipList = dataCreator.createListOfMembership();
-        List<Client> clientList = dataCreator.createListOfClients();
-        List<Trainer> trainerList = dataCreator.createListOfTrainers();
-
+        List<Client> listOfClients = dataCreator.createListOfClients();
+        List<Trainer> listOfTrainer = dataCreator.createListOfTrainers();
 
         DataReader dataReader = new DataReader();
 
-        List<Client> listOfClients = dataReader.readListOfClients();
+        List<Client> clientList = dataReader.readListOfClients();
         List<GymClass> gymClassList = dataReader.readListOfGymClasses();
-        List<Trainer> trainerList1 = dataReader.readListOfTrainer();
+        List<Trainer> trainerList = dataReader.readListOfTrainer();
+
 
         System.out.println("List of clients is: " + "\n" + listOfClients+ "\n");
         System.out.println("List of gymclasses is: " + "\n"+ gymClassList+ "\n");
@@ -37,19 +36,19 @@ public class Main {
         System.out.println("List of membership is: " + "\n" + membershipList+ "\n");
 
         TrainerManager trainerManager1 = new TrainerManager();
-        System.out.println("updatePricePerHourByTrainer method below: ");
+        System.out.println("updatePricePerHourByTrainer method below: "+ "\n");
         trainerManager1.updatePricePerHourByTrainer(trainerList,150);
         System.out.println(trainerList + "\n");
 
-        System.out.println("updateTrainerID method below: ");
+        System.out.println("updateTrainerID method below: "+ "\n");
         trainerManager1.updateTrainerID(trainerList,55);
         System.out.println(trainerList + "\n");
 
-        System.out.println("findTrainerById method below: ");
+        System.out.println("findTrainerById method below: "+ "\n");
         Trainer trainerResult = trainerManager1.findTrainerById(trainerList,3);
         System.out.println(trainerResult+ "\n");
 
-        System.out.println("searchTrainerByCheaperPricePerHourThanGivenValue: ");
+        System.out.println("searchTrainerByCheaperPricePerHourThanGivenValue: "+ "\n");
         boolean result = trainerManager1.searchTrainerByCheaperPricePerHourThanGivenValue(trainerList,100.0);
         System.out.println(result+ "\n");
 
@@ -62,39 +61,39 @@ public class Main {
 
         GymClassManager gymClassManager = new GymClassManager();
 
-        System.out.println("updateNoOfClientsPerGymClass method below: ");
+        System.out.println("updateNoOfClientsPerGymClass method below: "+ "\n");
         gymClassManager.updateNoOfClientsPerGymClass(gymClassList,15);
         System.out.println(gymClassList + "\n");
 
-        System.out.println("updateGymClassDuration method below: ");
+        System.out.println("updateGymClassDuration method below: "+ "\n");
         gymClassManager.updateGymClassDuration(gymClassList,55);
         System.out.println(gymClassList + "\n");
 
-        System.out.println("findGymClassByCode method below: ");
+        System.out.println("findGymClassByCode method below: "+ "\n");
         GymClass gymClassResult = gymClassManager.findGymClassByCode(gymClassList,"AQUA11");
         System.out.println(gymClassResult+ "\n");
 
-        System.out.println("searchGymClassWithGivenNoOfClientsPermitted method below: ");
+        System.out.println("searchGymClassWithGivenNoOfClientsPermitted method below: "+ "\n");
         boolean resultBooleanSearch = gymClassManager.searchGymClassWithGivenNoOfClientsPermitted(gymClassList,10);
         System.out.println(resultBooleanSearch+ "\n");
 
-        System.out.println("searchGymClassOfGivenDayOfWeek method below: ");
+        System.out.println("searchGymClassOfGivenDayOfWeek method below: "+ "\n");
         boolean resultBooleanSearch2 = gymClassManager.searchGymClassOfGivenDayOfWeek(gymClassList,DayOfWeek.SUNDAY);
         System.out.println(resultBooleanSearch2+ "\n");
 
-        System.out.println("searchGymClassByLocationAndActivity method below: ");
+        System.out.println("searchGymClassByLocationAndActivity method below: "+ "\n");
         boolean resultBooleanSearch3 = gymClassManager.searchGymClassByLocationAndActivity(gymClassList, GymLocation.TITAN,Activity.BAG_BOXING);
         System.out.println(resultBooleanSearch3 + "\n");
 
-        System.out.println("filterListOfGymClassByLocation method below: ");
+        System.out.println("filterListOfGymClassByLocation method below: "+ "\n");
         List<GymClass> resultGymClassesFilter1 = gymClassManager.filterListOfGymClassByLocation(gymClassList,GymLocation.AVIATIEI);
         System.out.println(resultGymClassesFilter1 +  "\n");
 
-        System.out.println("filterListOfGymClassByActivity method below: ");
+        System.out.println("filterListOfGymClassByActivity method below: "+ "\n");
         List<GymClass> resultGymClassesFilter2 = gymClassManager.filterListOfGymClassByActivity(gymClassList,Activity.AQUA);
         System.out.println(resultGymClassesFilter2+ "\n");
 
-        System.out.println("filterListOfGymClassWithNoOfClientsBiggerThanGivenValue method below:");
+        System.out.println("filterListOfGymClassWithNoOfClientsBiggerThanGivenValue method below:"+ "\n");
         List<GymClass> resultGymClassesFilter3 = gymClassManager.filterListOfGymClassWithNoOfClientsBiggerThanGivenValue(gymClassList,10);
         System.out.println(resultGymClassesFilter3+ "\n");
 
@@ -120,27 +119,25 @@ public class Main {
                 50,GymLocation.MILITARI,"Improves blood circulation, lymphatic system, tones " +
                 "the entire body and increases resistance – all in one workout.",09.00,DayOfWeek.WEDNESDAY,1 );
 
-      gymClassManager.removeGymClassFromListOfGymClass2(gymClassList,gymClassAnnuallyAqua2);
-      System.out.println("removeGymClassFromListOfGymClass method below: " + gymClassList + "\n");
-
-        System.out.println(gymClassList);
+        gymClassManager.removeGymClassFromListOfGymClass(gymClassList,gymClassAnnuallyAqua2);
+        System.out.println("removeGymClassFromListOfGymClass method below: " + gymClassList + "\n");
 
         MembershipManager membershipManager = new MembershipManager();
 
-        System.out.println("updateRegistrationDateOfMembership method below: ");
+        System.out.println("updateRegistrationDateOfMembership method below: "+ "\n");
         Date date = new Date();
         membershipManager.updateRegistrationDateOfMembership(membershipList,date);
-        System.out.println(membershipList);
+        System.out.println(membershipList+ "\n");
 
-        System.out.println("searchMembershipCheaperThanGivenValue method below: ");
+        System.out.println("searchMembershipCheaperThanGivenValue method below: "+ "\n");
         boolean resultBooleanSearch4 = membershipManager.searchMembershipCheaperThanGivenValue(membershipList,1400);
         System.out.println(resultBooleanSearch4 + "\n");
 
-        System.out.println("filterListOfMembershipsBetweenGivenValues method below: ");
+        System.out.println("filterListOfMembershipsBetweenGivenValues method below: "+ "\n");
         List<Membership> resultMembershipFilter1 = membershipManager.filterListOfMembershipsBetweenGivenValues(membershipList,100,500);
         System.out.println(resultMembershipFilter1);
 
-        System.out.println("filterListOfMembershipWithFutureStartDate method below: ");
+        System.out.println("filterListOfMembershipWithFutureStartDate method below: "+ "\n");
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         String futureDateString = "01/07/2021";
         Date futureDate = null;
@@ -153,13 +150,22 @@ public class Main {
         List<Membership> resultMembershipFilter2 = membershipManager.filterListOfMembershipWithFutureStartDate(membershipList,futureDate);
         System.out.println(resultMembershipFilter2 + "\n");
 
-        System.out.println("extractMembershipByClientId method below: ");
+        System.out.println("filterListOfMembershipByMembershipType method below: " + "\n");
+        List<Membership> resultFilterMembershipType = membershipManager.filterListOfMembershipByMembershipType(membershipList, MembershipType.WEEKDAY);
+        System.out.println(resultFilterMembershipType + "\n");
+
+        System.out.println("extractMembershipByClientId method below: "+ "\n");
         Map<Integer, List<String>> result3 = membershipManager.extractMembershipByClientId(clientList,membershipList);
         System.out.println(result3+ "\n");
 
+        System.out.println("applyDiscountToCustomizedMembership method below: " + "\n");
+        membershipManager.applyDiscountToCustomizedMembership(membershipList,"AB9_annually");
+        System.out.println(membershipList + "\n");
+
+
         ClientManager clientManager = new ClientManager();
 
-        System.out.println("updateClientMobile method below: ");
+        System.out.println("updateClientMobile method below: "+ "\n");
         clientManager.updateClientMobile(clientList,"0755125325",5);
         System.out.println(clientList + "\n");
 
@@ -170,6 +176,7 @@ public class Main {
         System.out.println("filterListOfMembershipByClient method below: " + "\n");
         List<Membership> resultListClientFilter = clientManager.filterListOfMembershipByClient(membershipList,10);
         System.out.println( resultListClientFilter + "\n");
+
 
 
 

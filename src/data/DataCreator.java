@@ -394,7 +394,7 @@ public class DataCreator {
                 "33 areas of fitness, cardio and strength.", 300,registrationDate,startDateAB7,
                 MembershipType.WEEKEND,7 ,monthlyList );
 
-        String startDateStringAB8 = "01/05/2021";
+        String startDateStringAB8 = "01/07/2021";
         Date startDateAB8 = null;
         try {
             startDateAB8 = format.parse(startDateStringAB8);
@@ -427,7 +427,7 @@ public class DataCreator {
                 9,annuallyList,trainer1,15,GymLocation.MILITARI);
 
 
-        String startDateStringAB10 = "01/05/2021";
+        String startDateStringAB10 = "01/07/2021";
         Date startDateAB10 = null;
         try {
             startDateAB10 = format.parse(startDateStringAB10);

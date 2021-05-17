@@ -43,8 +43,8 @@ public class MembershipManager {
         return resultListOfMembershipWithFutureStartDate;
     }
     public List<Membership> filterListOfMembershipByMembershipType(List<Membership> membershipList, MembershipType givenMembershipType){
-        List<model.Membership> resultListOfMembershipByMembershipType = new ArrayList<>();
-        for(model.Membership membership:membershipList){
+        List<Membership> resultListOfMembershipByMembershipType = new ArrayList<>();
+        for(Membership membership:membershipList){
             if(membership.getMembershipType().equals(givenMembershipType)){
                 resultListOfMembershipByMembershipType.add(membership);
             }
